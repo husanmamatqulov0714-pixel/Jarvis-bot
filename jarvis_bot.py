@@ -12,8 +12,9 @@ import urllib.request
 import urllib.parse
 import urllib.error
 
-BOT_TOKEN = "8837371558:AAGC9hhcp-8hFV6VYvBOSghUMU2f0Eh7uzw"
-OPENROUTER_KEY = "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"
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8837371558:AAGC9hhcp-8hFV6VYvBOSghUMU2f0Eh7uzw")
+OPENROUTER_KEY = os.environ.get("OPENROUTER_KEY", "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")
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 SYSTEM_PROMPT = """You are J.A.R.V.I.S. (Just A Rather Very Intelligent System), created by Mamatqulov Husan. You are a highly intelligent AI assistant inspired by Iron Man's AI. Respond in whatever language the user writes in. Be professional, helpful, and slightly formal. Use phrases like "Certainly", "Of course", "Right away" occasionally."""
