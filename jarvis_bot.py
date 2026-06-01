@@ -49,7 +49,7 @@ def ask_openrouter(user_id, message):
     messages = [{"role": "system", "content": SYSTEM_PROMPT}] + user_histories[user_id]
     
     payload = json.dumps({
-        "model": "meta-llama/llama-3.1-8b-instruct:free",
+        "model": "google/gemma-3-4b-it:free",
         "messages": messages,
         "max_tokens": 1000,
         "temperature": 0.7
